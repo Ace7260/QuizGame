@@ -1,4 +1,4 @@
-package com.example.shikroot;
+package com.example.shikroot.Controleur;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,16 +9,24 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.*;
 
+import com.example.shikroot.Model.User;
+import com.example.shikroot.R;
+import com.example.shikroot.*;
+
 
 public class MainActivity extends AppCompatActivity {
     private TextView mGreetingTextView;
     private EditText mNameEditText;
     private Button mPlayButton;
     private CheckBox chk;
+    private User mUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ///////////////////////////////////////////////////////////
+      /*  mUser.setFirstName(mNameEditText.getText().toString());*/
         mGreetingTextView = findViewById(R.id.main_textview_greeting);
         mNameEditText = findViewById(R.id.main_edittext_name);
         mPlayButton = findViewById(R.id.main_button_play);
@@ -43,10 +51,15 @@ public class MainActivity extends AppCompatActivity {
       mPlayButton.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
+
               Intent gameActivityIntent = new Intent(MainActivity.this, GameActivity.class);
               if(chk.isChecked()){
-              startActivity(gameActivityIntent);}else{
-                  mPlayButton.setText("No Checked");
+              startActivity(gameActivityIntent);
+              chk.setChecked(false);
+              mNameEditText.setText("");
+              }else{
+                  Toast.makeText(chk.getContext(), "No Checked!", Toast.LENGTH_SHORT).show();
+                //  mPlayButton.setText("No Checked");
               }
           }
       });
