@@ -8,20 +8,25 @@
     android:orientation="vertical"
     android:background="#474444"
     >
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#632">
     <TextView
         android:id="@+id/main_textview_greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:padding="8dp"
+        android:scaleY="2"
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:text="Welcome! What's your name?"
         android:layout_gravity="center"
         android:textStyle="bold"
-                />
+
+                /></LinearLayout>
 <EditText
     android:id="@+id/main_edittext_name"
     android:layout_width="match_parent"
@@ -29,7 +34,7 @@
      android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginTop="50dp"
-    android:hint="Ace1 Monster"
+    android:hint="Enter Your Name"
     android:textStyle="bold"
     android:textColorHint="@color/black"
     ></EditText>
@@ -40,7 +45,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:layout_marginLeft="16dp"
-        android:text="Acceptez vous les conditions de confidetialité"
+        android:text="Acceptez vous les conditions et régles de Shikroot Game"
         ></CheckBox>
     <Button
         android:id="@+id/main_button_play"
@@ -48,9 +53,32 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
         android:text="Let's play"
         android:backgroundTint="#FFC0CB"
         android:textColor="#ff00"
         android:textStyle="bold"
+        android:letterSpacing="0.5"
            />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#222"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ace1"
+            android:textSize="60sp"
+            android:scaleY="5"
+            android:scaleX="2"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textFontWeight="@integer/material_motion_duration_long_1"
+            android:textStyle="italic"
+            android:textColor="#FF0000"></TextView>
+
+    </LinearLayout>
+
 </LinearLayout>
