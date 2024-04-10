@@ -38,4 +38,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Thank you for using QuizGame! If you have any questions or feedback, don't hesitate to reach out. Happy quizzing! 🎉📚📱
 
-To learn more about the developer and their other projects, visit their website [here](https://ace7260.github.io/).
+To learn more about the developer and their other projects, visit their website [here](https://ace7260.netlify.app/).
